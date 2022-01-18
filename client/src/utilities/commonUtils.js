@@ -2,7 +2,7 @@ import Home from "../components/home/Home";
 
 export const TotalScreen = [
   {
-    screen_name: "home",
+    screen_name: "Home",
     components: Home,
   },
 ];

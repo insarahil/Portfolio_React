@@ -2,31 +2,33 @@ import { TotalScreen } from "./commonUtils";
 import { Subject } from "rxjs";
 
 export default class ScrollService {
-  static ScrollHandler = new ScrollService();
-  static CurrentScreenBroadCaster = new Subject();
-  static CurrentScreenFadeIn = new Subject();
+  static scrollHandler = new ScrollService();
+  static currentScreenBroadcaster = new Subject();
+  static currentScreenFadeIn = new Subject();
 
   constructor() {
     window.addEventListener("scroll", this.checkCurrentScreenUnderViewport);
   }
-  ScrollToHireMe = () => {
-    let contactMeScreen = document.getElementById("Contact Me");
+  scrollToHireMe = () => {
+    let contactMeScreen = document.getElementById("ContactMe");
     if (!contactMeScreen) return;
     contactMeScreen.scrollIntoView({ behavior: "smooth" });
   };
-  ScrollToHome = () => {
+  scrollToHome = () => {
     let homeScreen = document.getElementById("Home");
     if (!homeScreen) return;
     homeScreen.scrollIntoView({ behavior: "smooth" });
   };
-  isElemementView = (elem, type) => {
+  isElementInView = (elem, type) => {
     let rec = elem.getBoundingClientRect();
     let elementTop = rec.top;
     let elementBottom = rec.bottom;
+
     let partiallyVisible =
       elementTop < window.innerHeight && elementBottom >= 0;
     let completelyVisible =
-      elementTop >= 0 && elementBottom < window.innerHeight;
+      elementTop >= 0 && elementBottom <= window.innerHeight;
+
     switch (type) {
       case "partial":
         return partiallyVisible;
@@ -36,26 +38,29 @@ export default class ScrollService {
         return false;
     }
   };
+
   checkCurrentScreenUnderViewport = (event) => {
-    if (!event || object.keys(event).length < 1) return;
+    if (!event || Object.keys(event).length < 1) return;
     for (let screen of TotalScreen) {
-      let screenFromDom = document.getElementById(screen.screen_name);
-      if (!screenFromDom) continue;
-      let fullyVisible = this.isElemementView(screenFromDom, "complete");
-      let partiallyVisible = this.isElemementView(screenFromDom, "partial");
+      let screenFromDOM = document.getElementById(screen.screen_name);
+      if (!screenFromDOM) continue;
+
+      let fullyVisible = this.isElementInView(screenFromDOM, "complete");
+      let partiallyVisible = this.isElementInView(screenFromDOM, "partial");
+
       if (fullyVisible || partiallyVisible) {
-        if (partiallyVisible && !screen.allReadyRenderd) {
-          ScrollService.CurrentScreenFadeIn.next({
+        if (partiallyVisible && !screen.alreadyRendered) {
+          ScrollService.currentScreenFadeIn.next({
             fadeInScreen: screen.screen_name,
           });
-          screen["allReadyRenderd"] = true;
+          screen["alreadyRendered"] = true;
           break;
         }
-        if(fullyVisible){
-            ScrollService.CurrentScreenBroadCaster.next({
-                screenInView=screen.screen_name,
-            })
-            break;
+        if (fullyVisible) {
+          ScrollService.currentScreenBroadcaster.next({
+            screenInView: screen.screen_name,
+          });
+          break;
         }
       }
     }
