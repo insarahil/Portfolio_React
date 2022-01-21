@@ -47,6 +47,48 @@
   src: url("./assets/fonts/Poppins-Thin.ttf");
 }
 
+@font-face {
+  font-family: "Allan Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/fonts/Allan-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Allan Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/fonts/Allan-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat Black";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/fonts/Montserrat-Black.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat Light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/fonts/Montserrat-Light.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/fonts/Montserrat-Medium.ttf");
+}
+
+@font-face {
+  font-family: "OstrichSans Black";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/fonts/OstrichSans-Black.otf");
+}
+
 * {
   outline: none;
 }
@@ -54,7 +96,7 @@
 body {
   margin: 0;
   overflow-y: overlay;
-  font-family: "Poppins Regular";
+  font-family: "Montserrat Medium";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -87,7 +129,7 @@ body ::-webkit-scrollbar-thumb {
   width: 160px;
   cursor: pointer;
   transition: 0.2s;
-  font-family: "Poppins SemiBold";
+  font-family: "Montserrat Medium";
 }
 
 .btn:active {
@@ -99,6 +141,7 @@ body ::-webkit-scrollbar-thumb {
   border: 2px solid linen;
   font-size: 12px;
   background-color: #1f2235;
+  color: var(--white);
 }
 /* @media only screen and (max-width: 414px) {
   .primary-btn {
@@ -108,15 +151,14 @@ body ::-webkit-scrollbar-thumb {
 
 .primary-btn:hover {
   color: aliceblue;
-  border: 2px solid #ff5823;
+  border: 2px solid #ebeb5e;
   background-color: #1f2235;
 }
 
 .highlighted-btn {
-  color: var(--white);
-
+  color: white;
   font-size: 12px;
-  background-color: #ff5823;
+  background-color: var(--dark-orange);
 }
 @media only screen and (max-width: 568px) {
   .highlighted-btn {

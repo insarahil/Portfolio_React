@@ -7,6 +7,7 @@ export default function ScreenHeading(props) {
       <div className="screen-heading">
         <span>{props.title}</span>
       </div>
+
       {props.subHeading ? (
         <div className="screen-sub-heading">
           <span>{props.subHeading}</span>
@@ -14,6 +15,7 @@ export default function ScreenHeading(props) {
       ) : (
         <div></div>
       )}
+
       <div className="heading-seperator">
         <div className="seperator-line">
           <div className="seperator-blob">
