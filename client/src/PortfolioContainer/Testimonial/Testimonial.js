@@ -118,8 +118,8 @@ export default function Projects(props) {
                       src={require("../../assets/Testimonial/man.png").default}
                       alt="no internet connection"
                     />
-                    <h5>Daisy Dominic</h5>
-                    <p>CEO InansGolbal</p>
+                    <h5>Mike</h5>
+                    <p>TURAS Internation</p>
                   </div>
                 </div>
               </div>
@@ -153,8 +153,8 @@ export default function Projects(props) {
                       src={require("../../assets/Testimonial/mike.png").default}
                       alt="no internet connection"
                     />
-                    <h5>Daisy Dominic</h5>
-                    <p>CEO InansGolbal</p>
+                    <h5>David</h5>
+                    <p>SEP Managment</p>
                   </div>
                 </div>
               </div>
@@ -188,8 +188,8 @@ export default function Projects(props) {
                       src={require("../../assets/Testimonial/ehiz.jpg").default}
                       alt="no internet connection"
                     />
-                    <h5>Daisy Dominic</h5>
-                    <p>CEO InansGolbal</p>
+                    <h5>Stephan</h5>
+                    <p>AstraZeneca Plc</p>
                   </div>
                 </div>
               </div>
@@ -225,43 +225,8 @@ export default function Projects(props) {
                       }
                       alt="no internet connection"
                     />
-                    <h5>Daisy Dominic</h5>
-                    <p>CEO InansGolbal</p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-12">
-                <div className="testimonial-item">
-                  <div className="testimonial-comment">
-                    <p>
-                      <i className="fa fa-quote-left" />
-                      I Patronized Raheel and when he delivered, I honestly fell
-                      in love with the project. He is a very honest guy and he
-                      delivers ontime
-                      <i className="fa fa-quote-right" />
-                    </p>
-                    <ul className="stars list-unstyled">
-                      <li className="star">
-                        <i className="fa fa-star"></i>
-                      </li>
-                      <li className="star">
-                        <i className="fa fa-star"></i>
-                      </li>
-                      <li className="star">
-                        <i className="fa fa-star"></i>
-                      </li>
-                      <li className="star">
-                        <i className="fa fa-star"></i>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="testimonial-info">
-                    <img
-                      src={require("../../assets/Testimonial/lady.png").default}
-                      alt="no internet connection"
-                    />
-                    <h5>Daisy Dominic</h5>
-                    <p>CEO InansGolbal</p>
+                    <h5>Lodovica Biagi</h5>
+                    <p>Tesco Plc</p>
                   </div>
                 </div>
               </div>

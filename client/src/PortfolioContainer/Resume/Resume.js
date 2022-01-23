@@ -51,7 +51,7 @@ const Resume = (props) => {
   const programmingSkillsDetails = [
     { skill: "JavaScript", ratingPercentage: 70 },
     { skill: "React Js", ratingPercentage: 65 },
-    { skill: "React native", ratingPercentage: 65 },
+    { skill: "React Native", ratingPercentage: 65 },
     { skill: "Express Js", ratingPercentage: 65 },
     { skill: "Node JS", ratingPercentage: 65 },
     { skill: "Mongo Db", ratingPercentage: 75 },
