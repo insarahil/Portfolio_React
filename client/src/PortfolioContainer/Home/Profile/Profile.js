@@ -11,16 +11,16 @@ export default function Profile() {
           <div className="profile-detials">
             <div className="colz">
               <div className="colz-icon">
-                <a href="/">
+                <a href="https://www.facebook.com/insarahil/">
                   <i className="fa fa-facebook-square"></i>
                 </a>
-                <a href="/">
+                <a href="https://www.instagram.com/rehmanraheelur/?hl=en">
                   <i className="fa fa-instagram"></i>
                 </a>
-                <a href="/">
+                <a href="https://twitter.com/insarahilkhan">
                   <i className="fa fa-twitter-square"></i>
                 </a>
-                <a href="/">
+                <a href="https://www.linkedin.com/in/raheel-ur-rehman-b0862121b/">
                   <i className="fa fa-linkedin"></i>
                 </a>
               </div>
